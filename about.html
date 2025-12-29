@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Consulting | About Us</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            background: #0b3b60;
+            padding: 15px 0;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 120px;
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 22px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ================= GENERAL ================= */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #0b3b60;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.08);
+        }
+
+        /* ================= VISION & MISSION ================= */
+        .vm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .vm-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .vm-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .vm-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .vm-icon {
+            width: 48px;
+            height: 48px;
+            background: #ffb03b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vm-icon i {
+            color: #0b3b60;
+            font-size: 20px;
+        }
+
+        /* ================= CORE VALUES ================= */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .value-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 6px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-card i {
+            font-size: 26px;
+            color: #ffb03b;
+            margin-bottom: 10px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                background: #0b3b60;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                padding: 15px;
+                border-radius: 8px;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        footer {
+            background: #0b3b60;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/logo3.png" alt="Kings Consulting Logo">
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- ABOUT -->
+    <div class="section">
+        <h1>About Kings Consulting</h1>
+        <p>
+            Kings Consulting Supplies & Investment Ltd is a regional consultancy firm incorporated in Kenya 
+            to transform organizations through high-quality consultancy, training, research, monitoring & evaluation, 
+            supplies, and investment support.
+            <br><br>
+            We work with public institutions, private companies, NGOs, and regional organizations across 
+            Kenya and other African countries including Tanzania, Uganda, Ethiopia, Rwanda, Sudan, and South Sudan.
+        </p>
+    </div>
+
+    <!-- VISION & MISSION -->
+    <div class="vm-grid">
+        <div class="vm-card">
+            <div class="vm-header">
+                <div class="vm-icon"><i class="fas fa-eye"></i></div>
+                <h2>Our Vision</h2>
+            </div>
+            <p>
+                To be a leading consulting firm that empowers organizations with innovative, practical, 
+                and impactful solutions for sustainable growth.
+            </p>
+        </div>
+
+        <div class="vm-card">
+            <div class="vm-header">
+                <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+                <h2>Our Mission</h2>
+            </div>
+            <p>
+                To deliver high-quality consultancy, training, research, supplies, and investment support 
+                that enhances organizational performance, governance, and impact.
+            </p>
+        </div>
+    </div>
+
+    <!-- CORE VALUES -->
+    <div class="section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-card"><i class="fas fa-user-tie"></i><p>Professionalism</p></div>
+            <div class="value-card"><i class="fas fa-shield-alt"></i><p>Integrity & Transparency</p></div>
+            <div class="value-card"><i class="fas fa-award"></i><p>Quality Service Delivery</p></div>
+            <div class="value-card"><i class="fas fa-lightbulb"></i><p>Innovation</p></div>
+            <div class="value-card"><i class="fas fa-users"></i><p>Customer Focus</p></div>
+            <div class="value-card"><i class="fas fa-handshake"></i><p>Teamwork & Collaboration</p></div>
+        </div>
+    </div>
+
+    <!-- GEOGRAPHICAL COVERAGE -->
+    <div class="section">
+
+
+    <!-- CSR -->
+    <div class="section">
+        <h2>Corporate Social Responsibility (CSR)</h2>
+        <p>
+            Kings Consulting dedicates <strong>5% of its income</strong> to supporting vulnerable children 
+            and educational initiatives within the community.
+        </p>
+    </div>
+
+    <!-- PARTNERS -->
+    <div class="section">
+        <h2>Our Partners & Past Clients</h2>
+        <ul>
+            <li>Ministry of Education (Kenya)</li>
+            <li>Teachers Service Commission (TSC)</li>
+            <li>County Governments in Kenya</li>
+            <li>World Vision International</li>
+            <li>UN Agencies</li>
+            <li>Private Sector Companies</li>
+            <li>NGOs & Community-Based Organizations</li>
+            <li>Regional Training Institutions</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Kings Consulting Supplies & Investment Ltd — Professionalism | Quality | Transparency
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
